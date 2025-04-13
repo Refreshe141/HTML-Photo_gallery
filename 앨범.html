@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 앨범</title>
+    <link rel="stylesheet" href="앨범.css">
+</head>
+<body>
+    <div class="container">
+        <div class="album-group" id="group1">
+            <h2>그룹 1</h2>
+            <div class="slide">
+                <!-- 첫 번째 그룹의 썸네일들 -->
+                <div class="item" style="background-image: url('image1.jpg');">
+                    <div class="content">
+                        <div class="name">이미지 1</div>
+                        <div class="des">설명 1</div>
+                        <button onclick="openImage('image1.jpg')">확대</button>
+                    </div>
+                </div>
+                <!-- 더 많은 이미지들 추가 -->
+            </div>
+            <div class="button">
+                <button class="prev" onclick="prevPage(1)">❮</button>
+                <button class="next" onclick="nextPage(1)">❯</button>
+            </div>
+        </div>
+
+        <div class="album-group" id="group2">
+            <h2>그룹 2</h2>
+            <div class="slide">
+                <!-- 두 번째 그룹의 썸네일들 -->
+                <div class="item" style="background-image: url('image21.jpg');">
+                    <div class="content">
+                        <div class="name">이미지 21</div>
+                        <div class="des">설명 21</div>
+                        <button onclick="openImage('image21.jpg')">확대</button>
+                    </div>
+                </div>
+                
+                <!-- 더 많은 이미지들 추가 -->
+            </div>
+            <div class="button">
+                <button class="prev" onclick="prevPage(2)">❮</button>
+                <button class="next" onclick="nextPage(2)">❯</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 확대된 이미지 보기 -->
+    <div class="lightbox" id="lightbox">
+        <span class="close" onclick="closeImage()">X</span>
+        <img id="lightbox-img" src="" alt="확대된 이미지">
+    </div>
+
+    <script src="앨범.js"></script>
+</body>
+</html>
